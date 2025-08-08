@@ -1,0 +1,15 @@
+{
+  "name": "gtg-perfumes-homepage",
+  "version": "1.0.0",
+  "description": "GTG Perfumes pixel-perfect homepage built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "start": "python3 -m http.server 3000",
+    "serve": "python3 -m http.server 3000"
+  },
+  "keywords": ["html", "css", "javascript", "responsive", "perfumes"],
+  "author": "GTG Perfumes",
+  "license": "MIT",
+  "type": "module"
+}

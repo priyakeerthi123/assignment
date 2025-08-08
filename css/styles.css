@@ -268,8 +268,85 @@ img {
 .main-image {
   width: 100%;
   max-width: 400px;
-  height: auto;
+  height: 500px;
   border-radius: 10px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Perfume Bottle Graphics */
+.perfume-bottle {
+  width: 120px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottle-cap {
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(45deg, #333, #555);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.bottle-cap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.bottle-body {
+  width: 100px;
+  height: 250px;
+  border-radius: 15px;
+  position: relative;
+  background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.bottle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #2E8B57;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Different perfume colors */
+.perfume-classic .bottle-body {
+  background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+}
+
+.perfume-purple .bottle-body {
+  background: linear-gradient(45deg, #f3e5f5, #ce93d8);
+}
+
+.perfume-orange .bottle-body {
+  background: linear-gradient(45deg, #fff3e0, #ffb74d);
+}
+
+.perfume-blue .bottle-body {
+  background: linear-gradient(45deg, #e1f5fe, #4fc3f7);
 }
 
 .gallery-nav {

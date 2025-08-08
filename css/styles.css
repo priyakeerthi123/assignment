@@ -1406,6 +1406,20 @@ img {
     font-size: 24px;
   }
 
+  .product-features {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product-badge-container {
+    justify-content: center;
+  }
+
+  .product-price-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .radio-group {
     flex-direction: column;
     gap: 10px;

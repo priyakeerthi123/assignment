@@ -560,6 +560,58 @@ body {
   color: #2E8B57;
 }
 
+.newsletter-signup {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.newsletter-signup input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #2a2a2a;
+  color: white;
+  font-size: 14px;
+}
+
+.newsletter-signup input::placeholder {
+  color: #999;
+}
+
+.newsletter-signup button {
+  padding: 10px 20px;
+  background: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-signup button:hover {
+  background: #228B22;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
 .footer-bottom {
   border-top: 1px solid #333;
   padding-top: 20px;

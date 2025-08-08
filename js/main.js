@@ -1,15 +1,27 @@
-// DOM Content Loaded
+// DOM Content Loaded with error handling
 document.addEventListener('DOMContentLoaded', function() {
-    initializeApp();
+    try {
+        initializeApp();
+    } catch (error) {
+        console.error('Error initializing app:', error);
+    }
 });
 
+// Initialize app with performance optimization
 function initializeApp() {
-    initHamburgerMenu();
-    initProductGallery();
-    initProductOptions();
-    initScrollAnimations();
-    initCountUpAnimation();
-    initSmoothScrolling();
+    // Use requestAnimationFrame for better performance
+    requestAnimationFrame(() => {
+        initHamburgerMenu();
+        initProductGallery();
+        initProductOptions();
+        initSmoothScrolling();
+    });
+
+    // Delay non-critical animations
+    setTimeout(() => {
+        initScrollAnimations();
+        initCountUpAnimation();
+    }, 100);
 }
 
 // Hamburger Menu Functionality

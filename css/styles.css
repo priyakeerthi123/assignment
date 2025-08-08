@@ -972,6 +972,7 @@ img {
 
   .main-image {
     max-width: 300px;
+    height: 400px;
   }
 
   .thumbnails {

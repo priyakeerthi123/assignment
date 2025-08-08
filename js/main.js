@@ -421,6 +421,50 @@ function hideLoadingState(element) {
     }
 }
 
+// Performance monitoring
+function logPerformance() {
+    if ('performance' in window) {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        console.log(`Page load time: ${loadTime}ms`);
+    }
+}
+
+// Prefetch important resources
+function prefetchResources() {
+    const images = [
+        'assets/images/perfume-classic.png',
+        'assets/images/perfume-purple.png',
+        'assets/images/perfume-orange.png',
+        'assets/images/perfume-blue.png'
+    ];
+
+    images.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = src;
+        document.head.appendChild(link);
+    });
+}
+
+// Call performance monitoring after load
+window.addEventListener('load', () => {
+    logPerformance();
+    prefetchResources();
+});
+
+// Service Worker registration (if available)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+    });
+}
+
 // Export functions for testing (if needed)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {

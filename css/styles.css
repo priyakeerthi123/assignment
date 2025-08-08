@@ -388,16 +388,64 @@ img {
 .thumbnail {
   width: 80px;
   height: 80px;
-  object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .thumbnail:hover,
 .thumbnail.active {
   border-color: #2E8B57;
+  box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+}
+
+/* Thumbnail bottle graphics */
+.thumb-bottle {
+  width: 24px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumb-cap {
+  width: 12px;
+  height: 8px;
+  background: linear-gradient(45deg, #333, #555);
+  border-radius: 2px 2px 0 0;
+  margin-bottom: 2px;
+}
+
+.thumb-body {
+  width: 20px;
+  height: 50px;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumbnail colors */
+.perfume-classic .thumb-body {
+  background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+}
+
+.perfume-purple .thumb-body {
+  background: linear-gradient(45deg, #f3e5f5, #ce93d8);
+}
+
+.perfume-orange .thumb-body {
+  background: linear-gradient(45deg, #fff3e0, #ffb74d);
+}
+
+.perfume-blue .thumb-body {
+  background: linear-gradient(45deg, #e1f5fe, #4fc3f7);
 }
 
 .gallery-dots {

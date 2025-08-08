@@ -63,7 +63,12 @@ function initProductGallery() {
     const nextBtn = document.getElementById('nextBtn');
     
     let currentImageIndex = 0;
-    const perfumeTypes = ['classic', 'purple', 'orange', 'blue'];
+    const images = [
+        'https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400&h=500&fit=crop',
+        'https://images.unsplash.com/photo-1594736797933-d0eaa29ff26a?w=400&h=500&fit=crop',
+        'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=500&fit=crop',
+        'https://images.unsplash.com/photo-1585652757145-5dbca7c3e5c9?w=400&h=500&fit=crop'
+    ];
 
     // Thumbnail click functionality
     thumbnails.forEach((thumbnail, index) => {

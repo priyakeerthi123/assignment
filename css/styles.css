@@ -522,6 +522,38 @@ img {
   padding-left: 20px;
 }
 
+.product-badge-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.product-badge {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-badge.most-popular {
+  background: linear-gradient(45deg, #ff6b6b, #ff5722);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.product-badge.limited-edition {
+  background: linear-gradient(45deg, #ffd700, #ffb300);
+  color: #333;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 .product-title {
   font-size: 32px;
   font-weight: bold;

@@ -877,9 +877,14 @@ img {
     gap: 30px;
   }
 
-  .perfume-bottle {
+  .hero-perfume-bottle {
     width: 250px;
     right: 5%;
+  }
+
+  .hero-bottle {
+    width: 120px;
+    height: 280px;
   }
 
   .product-container {

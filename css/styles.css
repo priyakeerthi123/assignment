@@ -103,6 +103,21 @@ img {
   color: #2E8B57;
 }
 
+/* Cross-browser compatibility */
+.nav-links a,
+.shop-btn,
+.hero-cta,
+.add-cart,
+.gallery-nav,
+.thumbnail,
+.dot {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;

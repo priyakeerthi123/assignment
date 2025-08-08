@@ -66,16 +66,42 @@
         <!-- Product Gallery -->
         <div class="product-gallery">
           <div class="main-image-container">
-            <img id="mainImage" src="assets/images/perfume-classic.png" alt="GTG Perfume" class="main-image">
+            <div id="mainImage" class="main-image perfume-classic" data-perfume="classic">
+              <div class="perfume-bottle">
+                <div class="bottle-cap"></div>
+                <div class="bottle-body"></div>
+                <div class="bottle-label">GTG</div>
+              </div>
+            </div>
             <button class="gallery-nav nav-prev" id="prevBtn" aria-label="Previous image">‹</button>
             <button class="gallery-nav nav-next" id="nextBtn" aria-label="Next image">›</button>
           </div>
-          
+
           <div class="thumbnails">
-            <img src="assets/images/perfume-classic.png" alt="Classic Perfume" class="thumbnail active" data-index="0">
-            <img src="assets/images/perfume-purple.png" alt="Purple Perfume" class="thumbnail" data-index="1">
-            <img src="assets/images/perfume-orange.png" alt="Orange Perfume" class="thumbnail" data-index="2">
-            <img src="assets/images/perfume-blue.png" alt="Blue Perfume" class="thumbnail" data-index="3">
+            <div class="thumbnail active perfume-classic" data-index="0" data-perfume="classic">
+              <div class="thumb-bottle">
+                <div class="thumb-cap"></div>
+                <div class="thumb-body"></div>
+              </div>
+            </div>
+            <div class="thumbnail perfume-purple" data-index="1" data-perfume="purple">
+              <div class="thumb-bottle">
+                <div class="thumb-cap"></div>
+                <div class="thumb-body"></div>
+              </div>
+            </div>
+            <div class="thumbnail perfume-orange" data-index="2" data-perfume="orange">
+              <div class="thumb-bottle">
+                <div class="thumb-cap"></div>
+                <div class="thumb-body"></div>
+              </div>
+            </div>
+            <div class="thumbnail perfume-blue" data-index="3" data-perfume="blue">
+              <div class="thumb-bottle">
+                <div class="thumb-cap"></div>
+                <div class="thumb-body"></div>
+              </div>
+            </div>
           </div>
           
           <div class="gallery-dots">

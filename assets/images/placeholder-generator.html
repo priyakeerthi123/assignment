@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+</head>
+<body>
+    <script>
+        // Create SVG placeholders for perfume bottles
+        function createSVG(color, name) {
+            return `<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="400" fill="#f8f9fa"/>
+                <rect x="80" y="80" width="140" height="240" rx="20" fill="${color}" opacity="0.8"/>
+                <rect x="120" y="40" width="60" height="50" rx="10" fill="#333"/>
+                <circle cx="150" cy="65" r="5" fill="#fff"/>
+                <text x="150" y="370" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">${name}</text>
+            </svg>`;
+        }
+
+        const images = [
+            { name: 'perfume-classic.png', color: '#e6f3ff', text: 'Classic' },
+            { name: 'perfume-purple.png', color: '#f0e6ff', text: 'Purple' },
+            { name: 'perfume-orange.png', color: '#ffe6e6', text: 'Orange' },
+            { name: 'perfume-blue.png', color: '#e6f7ff', text: 'Blue' }
+        ];
+
+        console.log('SVG placeholders generated');
+    </script>
+</body>
+</html>

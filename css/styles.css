@@ -141,6 +141,10 @@ img {
 }
 
 .hamburger.active span:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+  -moz-transform: rotate(-45deg) translate(-5px, 6px);
+  -ms-transform: rotate(-45deg) translate(-5px, 6px);
+  -o-transform: rotate(-45deg) translate(-5px, 6px);
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
@@ -149,6 +153,10 @@ img {
 }
 
 .hamburger.active span:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+  -moz-transform: rotate(45deg) translate(-5px, -6px);
+  -ms-transform: rotate(45deg) translate(-5px, -6px);
+  -o-transform: rotate(45deg) translate(-5px, -6px);
   transform: rotate(45deg) translate(-5px, -6px);
 }
 

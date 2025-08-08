@@ -63,12 +63,7 @@ function initProductGallery() {
     const nextBtn = document.getElementById('nextBtn');
     
     let currentImageIndex = 0;
-    const images = [
-        'assets/images/perfume-classic.png',
-        'assets/images/perfume-purple.png',
-        'assets/images/perfume-orange.png',
-        'assets/images/perfume-blue.png'
-    ];
+    const perfumeTypes = ['classic', 'purple', 'orange', 'blue'];
 
     // Thumbnail click functionality
     thumbnails.forEach((thumbnail, index) => {

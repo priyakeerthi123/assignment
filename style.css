@@ -1,0 +1,141 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../assets/images/grass-bg.jpg') center no-repeat;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 2.5rem;
+}
+.hero-cta {
+  background: green;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Product Section */
+.product-section {
+  display: flex;
+  padding: 50px 20px;
+}
+.product-gallery img {
+  width: 100%;
+}
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.thumbnails img {
+  width: 60px;
+  cursor: pointer;
+}
+.add-cart {
+  display: inline-block;
+  margin-top: 20px;
+  background: green;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Stats */
+.stats-section {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+.stat {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.comparison-table th, .comparison-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #022;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .product-section {
+    flex-direction: column;
+  }
+}

@@ -234,13 +234,71 @@ img {
   background: #228B22;
 }
 
-.perfume-bottle {
+.hero-perfume-bottle {
   position: absolute;
   right: 10%;
   top: 50%;
   transform: translateY(-50%);
   width: 300px;
-  height: auto;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bottle {
+  width: 150px;
+  height: 350px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.hero-bottle-cap {
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(45deg, #333, #555);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.hero-bottle-cap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.hero-bottle-body {
+  width: 120px;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(225, 245, 254, 0.9));
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.hero-bottle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #2E8B57;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Product Section */

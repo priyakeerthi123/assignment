@@ -256,7 +256,17 @@ function initProductOptions() {
         });
     });
 
-    // Initialize
+    // Initialize - make sure no subscription is active initially
+    // Uncheck all radio buttons first
+    subscriptionRadios.forEach(radio => {
+        radio.checked = false;
+    });
+
+    // Check the first one (single subscription) by default
+    if (subscriptionRadios.length > 0) {
+        subscriptionRadios[0].checked = true;
+    }
+
     updateAddToCartButton();
     updateSubscriptionDisplay();
 }

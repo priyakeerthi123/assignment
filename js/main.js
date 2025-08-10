@@ -194,17 +194,11 @@ function initProductOptions() {
         }
     }
 
-    // Show/hide subscription details
-    function updateSubscriptionDetails() {
-        const selectedPurchaseType = document.querySelector('input[name="purchase-type"]:checked')?.value;
-        
-        if (singleDetails) {
-            singleDetails.classList.toggle('active', selectedPurchaseType === 'single-subscription');
-        }
-        
-        if (doubleDetails) {
-            doubleDetails.classList.toggle('active', selectedPurchaseType === 'double-subscription');
-        }
+    // Update subscription content visibility
+    function updateSubscriptionDisplay() {
+        // The CSS handles the show/hide logic for subscription content
+        // This function can be used for additional subscription-related updates
+        console.log('Subscription updated');
     }
 
     // Update product image based on fragrance selection

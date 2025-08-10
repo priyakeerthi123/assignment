@@ -196,9 +196,21 @@ function initProductOptions() {
 
     // Update subscription content visibility
     function updateSubscriptionDisplay() {
-        // The CSS handles the show/hide logic for subscription content
-        // This function can be used for additional subscription-related updates
-        console.log('Subscription updated');
+        const allSubscriptionOptions = document.querySelectorAll('.subscription-option');
+
+        // Remove active class from all options
+        allSubscriptionOptions.forEach(option => {
+            option.classList.remove('active');
+        });
+
+        // Add active class to the selected option
+        const selectedSubscription = document.querySelector('input[name="subscription-type"]:checked');
+        if (selectedSubscription) {
+            const selectedOption = selectedSubscription.closest('.subscription-option');
+            if (selectedOption) {
+                selectedOption.classList.add('active');
+            }
+        }
     }
 
     // Update product image based on fragrance selection

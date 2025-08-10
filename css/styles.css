@@ -807,41 +807,22 @@ input[name="subscription-type"] {
   padding: 20px;
 }
 
-/* Show content only when radio is checked */
-.subscription-option:has(input[type="radio"]:checked) .subscription-content {
-  max-height: 1000px;
-  opacity: 1;
-  padding: 20px;
+/* Show content only when subscription is active */
+.subscription-option.active .subscription-content {
+  display: block;
 }
 
-/* Style for checked radio buttons */
-.subscription-option input[type="radio"]:checked {
-  accent-color: #2E8B57;
-}
-
-.subscription-option:has(input[type="radio"]:checked) .subscription-label {
-  color: #2E8B57;
-}
-
-.subscription-option:has(input[type="radio"]:checked) {
-  border-color: #2E8B57;
-  background: #f0f8f4;
-}
-
-/* Fallback for browsers that don't support :has() */
 .subscription-option.active {
   border-color: #2E8B57;
   background: #f0f8f4;
 }
 
-.subscription-option.active .subscription-content {
-  max-height: 1000px;
-  opacity: 1;
-  padding: 20px;
-}
-
 .subscription-option.active .subscription-label {
   color: #2E8B57;
+}
+
+.subscription-option.active input[type="radio"] {
+  accent-color: #2E8B57;
 }
 
 .product-status {

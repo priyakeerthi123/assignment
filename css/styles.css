@@ -1670,6 +1670,19 @@ input[name="subscription-type"] {
     height: 50px;
   }
 
+  .fragrance-selection {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .fragrance-option {
+    padding: 10px;
+  }
+
+  .fragrance-option img {
+    height: 100px;
+  }
+
   .radio-group {
     flex-direction: column;
     gap: 10px;

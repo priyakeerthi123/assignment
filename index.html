@@ -132,44 +132,93 @@
           </div>
 
           <div class="product-options">
-            <!-- Purchase Type Selection -->
-            <div class="option-group">
-              <label class="option-label">Purchase Type</label>
-              <div class="radio-group">
-                <div class="radio-option">
-                  <input type="radio" name="purchase-type" value="one-time" id="one-time" checked>
-                  <label for="one-time">One-time Purchase</label>
+            <!-- Subscription Selection -->
+            <div class="subscription-section">
+              <!-- Single Subscription -->
+              <div class="subscription-option">
+                <div class="subscription-header">
+                  <input type="radio" name="subscription-type" value="single" id="single-subscription" checked>
+                  <label for="single-subscription" class="subscription-label">
+                    <span class="subscription-title">Single Subscription</span>
+                    <span class="subscription-price">$59.99</span>
+                  </label>
                 </div>
-                <div class="radio-option">
-                  <input type="radio" name="purchase-type" value="single-subscription" id="single-subscription">
-                  <label for="single-subscription">Single Subscription</label>
-                </div>
-                <div class="radio-option">
-                  <input type="radio" name="purchase-type" value="double-subscription" id="double-subscription">
-                  <label for="double-subscription">Double Subscription</label>
+
+                <div class="subscription-content">
+                  <div class="subscription-images">
+                    <div class="perfume-grid">
+                      <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=60&h=80&fit=crop" alt="Classic Perfume">
+                      <img src="https://images.unsplash.com/photo-1594736797933-d0eaa29ff26a?w=60&h=80&fit=crop" alt="Purple Perfume">
+                      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=60&h=80&fit=crop" alt="Orange Perfume">
+                    </div>
+                    <div class="perfume-grid">
+                      <img src="https://images.unsplash.com/photo-1585652757145-5dbca7c3e5c9?w=60&h=80&fit=crop" alt="Blue Perfume">
+                      <img src="https://images.unsplash.com/photo-1566394562351-db2772cd63b0?w=60&h=80&fit=crop" alt="Green Perfume">
+                      <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=60&h=80&fit=crop" alt="Pink Perfume">
+                    </div>
+                  </div>
+
+                  <div class="subscription-benefits">
+                    <p class="benefit">✓ Choose from signature scents to match your mood.</p>
+                    <p class="benefit">✓ 15% OFF Shipping</p>
+                    <p class="benefit">✓ Cancel any time</p>
+                    <p class="benefit">✓ 1 x 100ml Bottle Monthly</p>
+                  </div>
                 </div>
               </div>
-              
-              <!-- Subscription Details -->
-              <div id="single-details" class="subscription-details">
-                <h4>Single Subscription Benefits</h4>
-                <ul>
-                  <li>✓ 15% discount on every order</li>
-                  <li>✓ Free shipping</li>
-                  <li>✓ Delivered monthly</li>
-                  <li>✓ Cancel anytime</li>
-                </ul>
-              </div>
-              
-              <div id="double-details" class="subscription-details">
-                <h4>Double Subscription Benefits</h4>
-                <ul>
-                  <li>✓ 25% discount on every order</li>
-                  <li>✓ Free shipping</li>
-                  <li>✓ 2 bottles delivered monthly</li>
-                  <li>✓ Exclusive access to new fragrances</li>
-                  <li>✓ Cancel anytime</li>
-                </ul>
+
+              <!-- Double Subscription -->
+              <div class="subscription-option">
+                <div class="subscription-header">
+                  <input type="radio" name="subscription-type" value="double" id="double-subscription">
+                  <label for="double-subscription" class="subscription-label">
+                    <span class="subscription-title">Double Subscription</span>
+                    <span class="subscription-price">$109.99</span>
+                  </label>
+                </div>
+
+                <div class="subscription-content double-content">
+                  <!-- Choice 1 -->
+                  <div class="double-choice">
+                    <h5 class="choice-title">Choice 1</h5>
+                    <div class="subscription-images">
+                      <div class="perfume-grid">
+                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=60&h=80&fit=crop" alt="Classic Perfume">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0eaa29ff26a?w=60&h=80&fit=crop" alt="Purple Perfume">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=60&h=80&fit=crop" alt="Orange Perfume">
+                      </div>
+                      <div class="perfume-grid">
+                        <img src="https://images.unsplash.com/photo-1585652757145-5dbca7c3e5c9?w=60&h=80&fit=crop" alt="Blue Perfume">
+                        <img src="https://images.unsplash.com/photo-1566394562351-db2772cd63b0?w=60&h=80&fit=crop" alt="Green Perfume">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=60&h=80&fit=crop" alt="Pink Perfume">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Choice 2 -->
+                  <div class="double-choice">
+                    <h5 class="choice-title">Choice 2</h5>
+                    <div class="subscription-images">
+                      <div class="perfume-grid">
+                        <img src="https://images.unsplash.com/photo-1586470135633-10b905be3e5d?w=60&h=80&fit=crop" alt="Gold Perfume">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=60&h=80&fit=crop" alt="Silver Perfume">
+                        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=60&h=80&fit=crop" alt="Black Perfume">
+                      </div>
+                      <div class="perfume-grid">
+                        <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=60&h=80&fit=crop" alt="Red Perfume">
+                        <img src="https://images.unsplash.com/photo-1600721391776-b5cd0e0048f9?w=60&h=80&fit=crop" alt="White Perfume">
+                        <img src="https://images.unsplash.com/photo-1557170334-9c9d7b16fcf8?w=60&h=80&fit=crop" alt="Amber Perfume">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="subscription-benefits">
+                    <p class="benefit">✓ Choose from signature scents to match your mood.</p>
+                    <p class="benefit">✓ 25% OFF Shipping</p>
+                    <p class="benefit">✓ Cancel any time</p>
+                    <p class="benefit">✓ 2 x 100ml Bottles Monthly</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -285,7 +334,7 @@
         <tbody>
           <tr>
             <td>Premium Fragrances</td>
-            <td><span class="check-mark">��</span></td>
+            <td><span class="check-mark">✓</span></td>
             <td><span class="cross-mark">✗</span></td>
             <td><span class="cross-mark">✗</span></td>
             <td><span class="cross-mark">✗</span></td>

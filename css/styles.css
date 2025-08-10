@@ -1555,6 +1555,28 @@ input[name="subscription-type"] {
     flex-wrap: wrap;
   }
 
+  .double-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .subscription-header {
+    padding: 15px;
+  }
+
+  .subscription-content {
+    padding: 15px;
+  }
+
+  .perfume-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .perfume-grid img {
+    height: 50px;
+  }
+
   .radio-group {
     flex-direction: column;
     gap: 10px;

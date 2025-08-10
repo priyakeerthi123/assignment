@@ -839,7 +839,9 @@ input[name="subscription-type"] {
 }
 
 .subscription-option.active .subscription-content {
-  display: block;
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
 }
 
 .subscription-option.active .subscription-label {

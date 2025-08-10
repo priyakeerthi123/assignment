@@ -103,14 +103,10 @@ function initProductGallery() {
     // Update image function
     function updateImage(index) {
         currentImageIndex = index;
-        const perfumeType = perfumeTypes[index];
 
         if (mainImage) {
-            // Remove all perfume classes
-            mainImage.className = mainImage.className.replace(/perfume-\w+/g, '');
-            // Add new perfume class
-            mainImage.classList.add(`perfume-${perfumeType}`);
-            mainImage.setAttribute('data-perfume', perfumeType);
+            // Update main image source
+            mainImage.src = images[index];
         }
 
         // Update active states

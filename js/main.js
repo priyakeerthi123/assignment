@@ -280,17 +280,26 @@ function initProductOptions() {
         }
     }
 
-    // Event listeners
-    fragranceRadios.forEach(radio => {
-        radio.addEventListener('change', function() {
-            updateAddToCartButton();
-            updateProductImage();
+    // Event listeners for fragrance selection
+    fragranceOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            handleFragranceSelection(this);
+            // Update main product image to show first selected fragrance
+            const firstSelected = selectedFragrances[0];
+            if (firstSelected) {
+                const imageMap = {
+                    'classic': 0,
+                    'purple': 1,
+                    'orange': 2
+                };
+                const imageIndex = imageMap[firstSelected] || 0;
+                updateImage(imageIndex);
+            }
         });
     });
 
     subscriptionRadios.forEach(radio => {
         radio.addEventListener('change', function() {
-            updateAddToCartButton();
             updateSubscriptionDisplay();
         });
     });
@@ -318,7 +327,7 @@ function initProductOptions() {
         subscriptionRadios[0].checked = true;
     }
 
-    updateAddToCartButton();
+    updateSelectionDisplay();
     updateSubscriptionDisplay();
 }
 

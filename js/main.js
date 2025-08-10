@@ -194,16 +194,16 @@ function initProductOptions() {
         }
     }
 
-    // Update subscription content visibility
+    // Update subscription content visibility (accordion behavior)
     function updateSubscriptionDisplay() {
         const allSubscriptionOptions = document.querySelectorAll('.subscription-option');
 
-        // Remove active class from all options
+        // Remove active class from all options first
         allSubscriptionOptions.forEach(option => {
             option.classList.remove('active');
         });
 
-        // Add active class to the selected option
+        // Add active class only to the selected option
         const selectedSubscription = document.querySelector('input[name="subscription-type"]:checked');
         if (selectedSubscription) {
             const selectedOption = selectedSubscription.closest('.subscription-option');

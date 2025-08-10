@@ -238,6 +238,29 @@ function initProductOptions() {
             if (selectedOption) {
                 selectedOption.classList.add('active');
             }
+
+            // Update selection limits based on subscription type
+            if (selectedSubscription.value === 'double') {
+                maxSelections = 2;
+                // If user had only 1 selected, keep it, but allow selecting 1 more
+                if (selectedFragrances.length === 0) {
+                    selectedFragrances = ['classic'];
+                }
+            } else {
+                maxSelections = 1;
+                // If user had 2 selected, keep only the first one
+                if (selectedFragrances.length > 1) {
+                    selectedFragrances = [selectedFragrances[0]];
+                    // Update visual state
+                    fragranceOptions.forEach(option => {
+                        const fragrance = option.dataset.fragrance;
+                        option.classList.toggle('active', selectedFragrances.includes(fragrance));
+                    });
+                }
+            }
+
+            updateSelectionDisplay();
+            updateAddToCartButton();
         }
     }
 

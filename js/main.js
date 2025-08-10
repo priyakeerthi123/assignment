@@ -156,10 +156,8 @@ function initProductGallery() {
 // Product Options Functionality
 function initProductOptions() {
     const fragranceRadios = document.querySelectorAll('input[name="fragrance"]');
-    const purchaseTypeRadios = document.querySelectorAll('input[name="purchase-type"]');
+    const subscriptionRadios = document.querySelectorAll('input[name="subscription-type"]');
     const addToCartBtn = document.getElementById('addToCart');
-    const singleDetails = document.getElementById('single-details');
-    const doubleDetails = document.getElementById('double-details');
 
     // Update Add to Cart button text
     function updateAddToCartButton() {

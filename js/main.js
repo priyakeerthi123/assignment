@@ -87,7 +87,7 @@ function initProductGallery() {
     // Previous button functionality
     if (prevBtn) {
         prevBtn.addEventListener('click', function() {
-            currentImageIndex = currentImageIndex === 0 ? perfumeTypes.length - 1 : currentImageIndex - 1;
+            currentImageIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
             updateImage(currentImageIndex);
         });
     }
@@ -95,7 +95,7 @@ function initProductGallery() {
     // Next button functionality
     if (nextBtn) {
         nextBtn.addEventListener('click', function() {
-            currentImageIndex = currentImageIndex === perfumeTypes.length - 1 ? 0 : currentImageIndex + 1;
+            currentImageIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
             updateImage(currentImageIndex);
         });
     }

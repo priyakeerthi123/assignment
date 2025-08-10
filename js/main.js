@@ -160,9 +160,40 @@ function initProductOptions() {
     let selectedFragrances = ['classic']; // Default selection
     let maxSelections = 1; // Default for single subscription
 
+    // Handle fragrance selection
+    function handleFragranceSelection(option) {
+        const fragrance = option.dataset.fragrance;
+        const isSelected = selectedFragrances.includes(fragrance);
+
+        if (isSelected) {
+            // Deselect if already selected
+            selectedFragrances = selectedFragrances.filter(f => f !== fragrance);
+            option.classList.remove('active');
+        } else {
+            // Select if under limit
+            if (selectedFragrances.length < maxSelections) {
+                selectedFragrances.push(fragrance);
+                option.classList.add('active');
+            }
+        }
+
+        updateSelectionDisplay();
+        updateAddToCartButton();
+    }
+
+    // Update selection display
+    function updateSelectionDisplay() {
+        if (selectionCount) {
+            selectionCount.textContent = `${selectedFragrances.length} selected`;
+        }
+
+        if (selectionLimit) {
+            selectionLimit.style.display = maxSelections > 1 ? 'block' : 'none';
+        }
+    }
+
     // Update Add to Cart button text
     function updateAddToCartButton() {
-        const selectedFragrance = document.querySelector('input[name="fragrance"]:checked')?.value || 'classic';
         const selectedSubscription = document.querySelector('input[name="subscription-type"]:checked')?.value || 'single';
 
         const fragranceNames = {
@@ -177,21 +208,17 @@ function initProductOptions() {
         };
 
         if (addToCartBtn) {
+            const fragranceText = selectedFragrances.length === 1
+                ? fragranceNames[selectedFragrances[0]]
+                : selectedFragrances.map(f => fragranceNames[f]).join(' + ');
+
             const cartText = addToCartBtn.querySelector('.cart-icon').nextSibling;
-            cartText.textContent = ` Add to Cart - ${fragranceNames[selectedFragrance]}, ${subscriptionNames[selectedSubscription]} `;
+            cartText.textContent = ` Add to Cart - ${fragranceText}, ${subscriptionNames[selectedSubscription]} `;
 
-            // Update href with dynamic link (6 different combinations)
-            const cartLinks = {
-                'classic-single': '#cart/classic/single-subscription',
-                'classic-double': '#cart/classic/double-subscription',
-                'purple-single': '#cart/purple/single-subscription',
-                'purple-double': '#cart/purple/double-subscription',
-                'orange-single': '#cart/orange/single-subscription',
-                'orange-double': '#cart/orange/double-subscription'
-            };
-
-            const linkKey = `${selectedFragrance}-${selectedSubscription}`;
-            addToCartBtn.href = cartLinks[linkKey] || '#cart';
+            // Update href with dynamic link
+            const fragranceKey = selectedFragrances.sort().join('-');
+            const linkKey = `${fragranceKey}-${selectedSubscription}`;
+            addToCartBtn.href = `#cart/${linkKey}`;
         }
     }
 

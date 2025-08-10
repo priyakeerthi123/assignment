@@ -803,8 +803,12 @@ input[name="subscription-type"] {
 
 /* Hide subscription content by default */
 .subscription-content {
-  display: none;
-  transition: all 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Show content only when radio is checked */

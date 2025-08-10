@@ -162,37 +162,34 @@ function initProductOptions() {
     // Update Add to Cart button text
     function updateAddToCartButton() {
         const selectedFragrance = document.querySelector('input[name="fragrance"]:checked')?.value || 'classic';
-        const selectedPurchaseType = document.querySelector('input[name="purchase-type"]:checked')?.value || 'one-time';
-        
+        const selectedSubscription = document.querySelector('input[name="subscription-type"]:checked')?.value || 'single';
+
         const fragranceNames = {
             'classic': 'Classic',
             'purple': 'Purple',
             'orange': 'Orange'
         };
 
-        const purchaseTypeNames = {
-            'one-time': 'One-time',
-            'single-subscription': 'Single Sub',
-            'double-subscription': 'Double Sub'
+        const subscriptionNames = {
+            'single': 'Single Subscription',
+            'double': 'Double Subscription'
         };
 
         if (addToCartBtn) {
-            addToCartBtn.textContent = `Add to Cart - ${fragranceNames[selectedFragrance]}, ${purchaseTypeNames[selectedPurchaseType]}`;
-            
-            // Update href with dynamic link (9 different combinations)
+            const cartText = addToCartBtn.querySelector('.cart-icon').nextSibling;
+            cartText.textContent = ` Add to Cart - ${fragranceNames[selectedFragrance]}, ${subscriptionNames[selectedSubscription]} `;
+
+            // Update href with dynamic link (6 different combinations)
             const cartLinks = {
-                'classic-one-time': '#cart/classic/one-time',
-                'classic-single-subscription': '#cart/classic/single-sub',
-                'classic-double-subscription': '#cart/classic/double-sub',
-                'purple-one-time': '#cart/purple/one-time',
-                'purple-single-subscription': '#cart/purple/single-sub',
-                'purple-double-subscription': '#cart/purple/double-sub',
-                'orange-one-time': '#cart/orange/one-time',
-                'orange-single-subscription': '#cart/orange/single-sub',
-                'orange-double-subscription': '#cart/orange/double-sub'
+                'classic-single': '#cart/classic/single-subscription',
+                'classic-double': '#cart/classic/double-subscription',
+                'purple-single': '#cart/purple/single-subscription',
+                'purple-double': '#cart/purple/double-subscription',
+                'orange-single': '#cart/orange/single-subscription',
+                'orange-double': '#cart/orange/double-subscription'
             };
-            
-            const linkKey = `${selectedFragrance}-${selectedPurchaseType}`;
+
+            const linkKey = `${selectedFragrance}-${selectedSubscription}`;
             addToCartBtn.href = cartLinks[linkKey] || '#cart';
         }
     }

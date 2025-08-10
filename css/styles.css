@@ -813,7 +813,9 @@ input[name="subscription-type"] {
 
 /* Show content only when radio is checked */
 .subscription-option:has(input[type="radio"]:checked) .subscription-content {
-  display: block;
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
 }
 
 /* Style for checked radio buttons */

@@ -225,16 +225,16 @@ function initProductOptions() {
         });
     });
 
-    purchaseTypeRadios.forEach(radio => {
+    subscriptionRadios.forEach(radio => {
         radio.addEventListener('change', function() {
             updateAddToCartButton();
-            updateSubscriptionDetails();
+            updateSubscriptionDisplay();
         });
     });
 
     // Initialize
     updateAddToCartButton();
-    updateSubscriptionDetails();
+    updateSubscriptionDisplay();
 }
 
 // Scroll Animations

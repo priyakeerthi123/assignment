@@ -684,6 +684,141 @@ img {
   margin-bottom: 25px;
 }
 
+/* Subscription Section Styles */
+.subscription-section {
+  margin-bottom: 30px;
+}
+
+.subscription-option {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.subscription-option:hover {
+  border-color: #2E8B57;
+  box-shadow: 0 4px 15px rgba(46, 139, 87, 0.1);
+}
+
+.subscription-header {
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  cursor: pointer;
+}
+
+.subscription-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.subscription-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.subscription-price {
+  font-size: 20px;
+  color: #2E8B57;
+  font-weight: 700;
+}
+
+.subscription-content {
+  padding: 20px;
+  background: white;
+}
+
+.double-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.double-choice {
+  padding: 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.choice-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.subscription-images {
+  margin-bottom: 20px;
+}
+
+.perfume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.perfume-grid img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease;
+}
+
+.perfume-grid img:hover {
+  transform: scale(1.05);
+  border-color: #2E8B57;
+}
+
+.subscription-benefits {
+  font-size: 14px;
+}
+
+.benefit {
+  margin-bottom: 8px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.benefit:last-child {
+  margin-bottom: 0;
+}
+
+/* Radio button styling for subscriptions */
+input[name="subscription-type"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #2E8B57;
+  margin-right: 15px;
+}
+
+/* Show/hide subscription content */
+.subscription-option input[type="radio"]:not(:checked) ~ .subscription-label + .subscription-content {
+  display: none;
+}
+
+.subscription-option input[type="radio"]:checked {
+  accent-color: #2E8B57;
+}
+
+.subscription-option input[type="radio"]:checked ~ .subscription-label {
+  color: #2E8B57;
+}
+
+.subscription-option:has(input[type="radio"]:checked) {
+  border-color: #2E8B57;
+  background: #f0f8f4;
+}
+
 .product-status {
   margin-bottom: 20px;
   padding: 15px;

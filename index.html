@@ -224,20 +224,27 @@
 
             <!-- Fragrance Selection -->
             <div class="option-group">
-              <label class="option-label">Select Fragrance</label>
-              <div class="radio-group">
-                <div class="radio-option">
-                  <input type="radio" name="fragrance" value="classic" id="classic" checked>
-                  <label for="classic">Classic</label>
+              <label class="option-label">Select Fragrance(s)</label>
+              <div class="fragrance-selection">
+                <div class="fragrance-option active" data-fragrance="classic">
+                  <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=120&h=150&fit=crop" alt="Classic Perfume">
+                  <span class="fragrance-name">Classic</span>
+                  <div class="selection-indicator">✓</div>
                 </div>
-                <div class="radio-option">
-                  <input type="radio" name="fragrance" value="purple" id="purple">
-                  <label for="purple">Purple</label>
+                <div class="fragrance-option" data-fragrance="purple">
+                  <img src="https://images.unsplash.com/photo-1594736797933-d0eaa29ff26a?w=120&h=150&fit=crop" alt="Purple Perfume">
+                  <span class="fragrance-name">Purple</span>
+                  <div class="selection-indicator">✓</div>
                 </div>
-                <div class="radio-option">
-                  <input type="radio" name="fragrance" value="orange" id="orange">
-                  <label for="orange">Orange</label>
+                <div class="fragrance-option" data-fragrance="orange">
+                  <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=120&h=150&fit=crop" alt="Orange Perfume">
+                  <span class="fragrance-name">Orange</span>
+                  <div class="selection-indicator">✓</div>
                 </div>
+              </div>
+              <div class="selection-info">
+                <span id="selection-count">1 selected</span>
+                <span id="selection-limit" style="display: none;">Select up to 2 fragrances for Double Subscription</span>
               </div>
             </div>
           </div>

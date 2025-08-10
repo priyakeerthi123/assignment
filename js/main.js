@@ -151,9 +151,14 @@ function initProductGallery() {
 
 // Product Options Functionality
 function initProductOptions() {
-    const fragranceRadios = document.querySelectorAll('input[name="fragrance"]');
+    const fragranceOptions = document.querySelectorAll('.fragrance-option');
     const subscriptionRadios = document.querySelectorAll('input[name="subscription-type"]');
     const addToCartBtn = document.getElementById('addToCart');
+    const selectionCount = document.getElementById('selection-count');
+    const selectionLimit = document.getElementById('selection-limit');
+
+    let selectedFragrances = ['classic']; // Default selection
+    let maxSelections = 1; // Default for single subscription
 
     // Update Add to Cart button text
     function updateAddToCartButton() {

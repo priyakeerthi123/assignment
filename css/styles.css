@@ -801,22 +801,43 @@ input[name="subscription-type"] {
   margin-right: 15px;
 }
 
-/* Show/hide subscription content */
-.subscription-option input[type="radio"]:not(:checked) ~ .subscription-label + .subscription-content {
+/* Hide subscription content by default */
+.subscription-content {
   display: none;
+  transition: all 0.3s ease;
 }
 
+/* Show content only when radio is checked */
+.subscription-option:has(input[type="radio"]:checked) .subscription-content {
+  display: block;
+}
+
+/* Style for checked radio buttons */
 .subscription-option input[type="radio"]:checked {
   accent-color: #2E8B57;
 }
 
-.subscription-option input[type="radio"]:checked ~ .subscription-label {
+.subscription-option:has(input[type="radio"]:checked) .subscription-label {
   color: #2E8B57;
 }
 
 .subscription-option:has(input[type="radio"]:checked) {
   border-color: #2E8B57;
   background: #f0f8f4;
+}
+
+/* Fallback for browsers that don't support :has() */
+.subscription-option.active {
+  border-color: #2E8B57;
+  background: #f0f8f4;
+}
+
+.subscription-option.active .subscription-content {
+  display: block;
+}
+
+.subscription-option.active .subscription-label {
+  color: #2E8B57;
 }
 
 .product-status {

@@ -244,6 +244,18 @@ function initProductOptions() {
         });
     });
 
+    // Add click handlers for subscription headers
+    const subscriptionHeaders = document.querySelectorAll('.subscription-header');
+    subscriptionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const radio = this.querySelector('input[type="radio"]');
+            if (radio && !radio.checked) {
+                radio.checked = true;
+                radio.dispatchEvent(new Event('change'));
+            }
+        });
+    });
+
     // Initialize
     updateAddToCartButton();
     updateSubscriptionDisplay();
